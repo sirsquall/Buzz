@@ -1,15 +1,52 @@
 [![Build Status](https://secure.travis-ci.org/kriswallsmith/Buzz.png?branch=master)](http://travis-ci.org/kriswallsmith/Buzz)
 
-Buzz is a lightweight PHP 5.3 library for issuing HTTP requests.
+Laravel : Buzz is a lightweight PHP 5.3 library for issuing HTTP requests.
+
+
+### Installing via Composer
+
+Update your project's composer.json file to include Buzz:
+
+```javascript
+{
+    "require": {
+        "sirsquall/buzz": "v0.11"
+    }
+}
+```
+Run the Composer update comand
+
+    $ composer update
+
+
+In your `config/app.php` add `'Buzz\BuzzServiceProvider'` to the end of the `$providers` array
+
+    'providers' => array(
+
+        'Illuminate\Foundation\Providers\ArtisanServiceProvider',
+        'Illuminate\Auth\AuthServiceProvider',
+        ...
+        'Buzz\BuzzServiceProvider',
+
+    ),
+
+At the end of `config/app.php` add `'Buzz'    => 'Buzz\Buzz'` to the `$aliases` array
+
+    'aliases' => array(
+
+        'App'        => 'Illuminate\Support\Facades\App',
+        'Artisan'    => 'Illuminate\Support\Facades\Artisan',
+        ...
+       'Buzz'            => 'Buzz\Buzz',
+
+    ),
 
 ```php
 <?php
 
-$browser = new Buzz\Browser();
-$response = $browser->get('http://www.google.com');
-
-echo $browser->getLastRequest()."\n";
+$response = Buzz::get('http://www.google.com');
 echo $response;
+echo $response->getContent;
 ```
 
 You can also use the low-level HTTP classes directly.
@@ -26,3 +63,4 @@ $client->send($request, $response);
 echo $request;
 echo $response;
 ```
+
