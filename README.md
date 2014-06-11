@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/kriswallsmith/Buzz.png?branch=master)](http://travis-ci.org/kriswallsmith/Buzz)
+Forked from : https://github.com/kriswallsmith/Buzz 
 
 Laravel : Buzz is a lightweight PHP 5.3 library for issuing HTTP requests.
 
