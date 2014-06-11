@@ -41,6 +41,12 @@ At the end of `config/app.php` add `'Buzz'    => 'Buzz\Buzz'` to the `$aliases` 
 
     ),
 
+To override the default configuration options you can publish the config file.
+
+    php artisan config:publish sirsquall/buzz
+
+You may now edit these options at app/config/packages/sirsquall/buzz/config.php.
+
 ```php
 <?php
 
