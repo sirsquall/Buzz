@@ -1,5 +1,5 @@
 {
-    "name": "sirsquall/buzz",
+    "name": "kriswallsmith/buzz",
     "description": "Lightweight HTTP client",
     "keywords": ["http client", "curl"],
     "homepage": "https://github.com/kriswallsmith/Buzz",
@@ -21,12 +21,9 @@
     "suggest": {
         "ext-curl": "*"
     },
-    "config": {
-        "bin-dir": "bin"
-    },
     "autoload": {
         "psr-0": {
-            "Buzz": "lib/"
+            "Buzz": "src/"
         }
     }
 }
