@@ -10,7 +10,7 @@ Update your project's composer.json file to include Buzz:
 ```javascript
 {
     "require": {
-        "sirsquall/buzz": "v0.11"
+        "sirsquall/buzz": "v0.12"
     }
 }
 ```
